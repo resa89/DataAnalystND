@@ -1,0 +1,101 @@
+# USING JUPYTER NOTEBOOK
+
+
+1. Installing Jupyter Notebook
+
+	> conda install jupyter Notebook 		#[with Conda]
+	> pip install jupyter notebook 			#[with PIP]
+
+
+2. Launching the notebook server
+
+	> jupyter notebook
+	- browse to: http://localhost:8888		# or http://localhost:8889
+
+
+3. Install Notebook Conda
+	
+	- installing notebook conda:
+		> conda install nb_conda
+
+	- then a new tab in jupyter notebook appear: 'Conda' where you can manage your environements from browser
+
+
+4. Shortcuts
+
+	- inserting new cells with 'A' (above) and 'B' (below)
+	- make cell a Markdown cell with 'M' and a Code cell with 'Y'
+	- deleting a cell with two 'D', 'D'
+	- saving notebook with 'S'
+	- access the command palette by pressing Shift + Control/Command + 'P' (not in firefox)
+	- show all keyboard shortcuts with 'H'
+
+
+5. Build-in Magic Commands
+
+	- set up matplotlib to work interactively in the notebook with 
+
+		%matplotlib inline 			#[in first line of cell]
+
+	- for retina displays make diagrams higher resoluted with
+
+		%config InlineBackend.figure_format = 'retina'
+
+	- activate interactive debugger to inspect variables in current namespace with
+
+		%pdb						#[in first line of cell]
+	
+	- %: for line magics
+	- %%: cell magics
+
+	- more magic commands here: https://ipython.readthedocs.io/en/stable/interactive/magics.html
+
+
+6. Timing Code
+	
+	- meassure time for one line (e.g. one function)
+		%timeit function1(20)
+		%timeit function2(20)
+
+	- meassure time for one cell
+		%%timeit					#(in the first line of cell)
+
+
+7. Markdown language
+
+	- how to write mathematical expression and more see here: https://www.latex-tutorial.com/
+
+
+8. Converting jupyter notebooks
+
+	- for example to html, pdf or latex from browser GUI
+	- or from console with command
+
+	- see more here: https://nbconvert.readthedocs.io/en/latest/usage.html
+
+
+9. Creating a slideshow
+
+	- creating a slideshow from the browser notebook:
+		View > Cell Toolbar > Slideshow
+
+	- then you can tag every cell with a slideshow tag:
+
+		SLIDES: are full slides that you move through left to right.
+		SUB-SLIDES: show up in the slideshow by pressing up or down.
+		FRAGMENTS: are hidden at first, then appear with a button press
+		SKIP: You can skip cells in the slideshow with Skip and Notes leaves the cell as speaker notes.
+
+	- convert to slideshow
+		> jupyter nbconvert notebook.ipynb --to slides
+
+	- then you can open the slideshow with the html file
+
+	- or convert and view slideshow
+		> jupyter nbconvert notebook.ipynb --to slides --post serve
+
+
+
+
+
+

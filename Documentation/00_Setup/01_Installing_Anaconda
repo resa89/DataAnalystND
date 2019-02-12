@@ -1,0 +1,92 @@
+# INSTALLING ANACONDA
+
+
+1. Download
+
+	https://www.anaconda.com/download/
+
+	- Choose the Python 3.6 version
+	- choose the 64-bit installer if you have a 64-bit operating system, otherwise go with the 32-bit installer
+	- check in console with
+		> conda list
+
+	In Windows:
+	- some additional programs are installed: Anaconda Navigator, Anaconda Prompt, Spyder
+	- use Anaconda Prompt as console
+	- to avoid errors later got to Anaconda Prompt and type:
+		> conda upgrade conda
+		> conda upgrade --all
+
+
+Troubleshooting
+	If you are seeing the following "conda command not found" and are using ZShell, you have to do the following:
+
+	Add export PATH="/Users/username/anaconda/bin:$PATH" to your .zsh_config file.
+
+
+
+2. Install packages
+
+	- in general you can install, remove and update packages with this comands:
+		> conda install package_name
+		> conda remove package_name
+		> conda update package_name
+
+	- you can update all packages with following command:
+		> conda update --all
+
+	- you can see all installed packages with:
+		> conda list
+
+	- install numpy
+		> conda install numpy
+
+	- install multiple packages
+		> conda install scipy pandas
+
+
+	- Package Overview
+		- NumPy
+		- Pandas
+		- Matplotlib
+		- Ipython
+		- SciPy
+		- Sklearn (Scikit learn)
+
+
+3. Managing virtual environments
+
+	- you can install a virtual environment with conda:
+		> conda create -n env_name list of packages		# [template]
+		> conda create -n my_env numpy 					# [example]
+		> conda create -n py3 python=3					# [example]
+		> conda create -n py2 python=2					# [example]
+
+	- list all installed environments:
+		> conda env list
+
+	- removing an environement:
+		> conda env remove -n env_name
+
+	- activate your virtual environment:
+		> source activate my_env						# [on Linus, OSX]
+		> activate my_env								# [on Windows]
+
+	- in the virtual environment you can list and install packages:
+		> conda list
+		> conda install package_name
+
+	- deactivate your virtual environment:
+		> source deactivate								# [on Linus, OSX]
+		> deactivate									# [on Windows]
+
+
+4. sharing an environment
+	
+	- export an environment
+		> conda env export > environment.yaml
+
+	- import an environment
+		> conda env create -f environment.yaml
+
+
