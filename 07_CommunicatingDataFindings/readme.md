@@ -24,3 +24,23 @@ The insights of the user differences inbetween the 3 cities were interesting. In
 ## Key Insights for Presentation
 
 For the presentation, I focus on the different locations of rent stations, their busy stage and the comparison of their user attributes. Therefore, I show the different amount of rents per stations and the busy stage extraction. Also, I will show the clustering of the 3 station's centers to continue with the comparison of the member's attributes in all 3 cities.
+
+
+## Feedback from others
+
+- Remove data of 2019, because it distorted the month distribution.
+- Categorize the busy range for easier interpretations in the map.
+- Change color for busy range color (darker/more red for more stressed/busier stations).
+- Some missing axis descriptions.
+
+
+
+## References
+
+Ford GoBike data from: https://www.fordgobike.com/system-data
+
+Euclidean distance computation (used for the closest rent station to fix missing station name and id) from: https://stackoverflow.com/questions/41336756/find-the-closest-latitude-and-longitude
+
+Basemap example to plot longitude and latitude data: https://jakevdp.github.io/PythonDataScienceHandbook/04.13-geographic-data-with-basemap.html
+
+K-means algorithm from: https://mubaris.com/posts/kmeans-clustering/
